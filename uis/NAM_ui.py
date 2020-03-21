@@ -13,7 +13,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_NAM_window(object):
     def setupUi(self, NAM_window):
         NAM_window.setObjectName("NAM_window")
-        NAM_window.resize(1074, 802)
+        NAM_window.resize(1074, 769)
         NAM_window.setStyleSheet("/*\n"
 "    Copyright 2013 Emanuel Claesson\n"
 "\n"
@@ -304,7 +304,7 @@ class Ui_NAM_window(object):
         self.groupBox.setFont(font)
         self.groupBox.setObjectName("groupBox")
         self.listView = QtWidgets.QListView(self.groupBox)
-        self.listView.setGeometry(QtCore.QRect(630, 130, 241, 451))
+        self.listView.setGeometry(QtCore.QRect(630, 130, 241, 421))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.listView.setFont(font)
@@ -318,14 +318,14 @@ class Ui_NAM_window(object):
         font.setWeight(75)
         self.label.setFont(font)
         self.label.setObjectName("label")
-        self.lineEdit = QtWidgets.QLineEdit(self.groupBox)
-        self.lineEdit.setGeometry(QtCore.QRect(120, 130, 321, 41))
+        self.input_line = QtWidgets.QLineEdit(self.groupBox)
+        self.input_line.setGeometry(QtCore.QRect(70, 130, 311, 41))
         font = QtGui.QFont()
         font.setPointSize(16)
-        self.lineEdit.setFont(font)
-        self.lineEdit.setStyleSheet("border-color: rgb(255, 166, 23);\n"
+        self.input_line.setFont(font)
+        self.input_line.setStyleSheet("border-color: rgb(255, 166, 23);\n"
 "background-color: rgb(85, 85, 85);")
-        self.lineEdit.setObjectName("lineEdit")
+        self.input_line.setObjectName("input_line")
         self.label_2 = QtWidgets.QLabel(self.groupBox)
         self.label_2.setGeometry(QtCore.QRect(240, 70, 101, 31))
         font = QtGui.QFont()
@@ -334,13 +334,13 @@ class Ui_NAM_window(object):
         font.setWeight(75)
         self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
-        self.textEdit = QtWidgets.QTextEdit(self.groupBox)
-        self.textEdit.setGeometry(QtCore.QRect(70, 260, 431, 321))
+        self.code_text = QtWidgets.QTextEdit(self.groupBox)
+        self.code_text.setGeometry(QtCore.QRect(70, 260, 431, 291))
         font = QtGui.QFont()
         font.setPointSize(16)
-        self.textEdit.setFont(font)
-        self.textEdit.setStyleSheet("border-color: rgb(255, 166, 23);background-color: rgb(85, 85, 85);")
-        self.textEdit.setObjectName("textEdit")
+        self.code_text.setFont(font)
+        self.code_text.setStyleSheet("border-color: rgb(255, 166, 23);background-color: rgb(85, 85, 85);")
+        self.code_text.setObjectName("code_text")
         self.label_3 = QtWidgets.QLabel(self.groupBox)
         self.label_3.setGeometry(QtCore.QRect(240, 200, 91, 41))
         font = QtGui.QFont()
@@ -349,14 +349,45 @@ class Ui_NAM_window(object):
         font.setWeight(75)
         self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
+        self.calc_button = QtWidgets.QPushButton(self.groupBox)
+        self.calc_button.setGeometry(QtCore.QRect(390, 130, 111, 41))
+        font = QtGui.QFont()
+        font.setPointSize(17)
+        self.calc_button.setFont(font)
+        self.calc_button.setStyleSheet("QPushButton{\n"
+"border-color: rgb(255, 166, 23);\n"
+"background-color: rgb(85, 85, 85);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"background-color: rgb(255, 166, 23);}\n"
+"\n"
+"QPushButton:hover:!pressed{\n"
+"background-color: rgb(163, 109, 0);}\n"
+"\n"
+"")
+        self.calc_button.setObjectName("calc_button")
+        self.back_button = QtWidgets.QPushButton(self.groupBox)
+        self.back_button.setGeometry(QtCore.QRect(860, 600, 61, 31))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.back_button.setFont(font)
+        self.back_button.setStyleSheet("QPushButton{\n"
+"border-color: rgb(255, 166, 23);\n"
+"background-color: rgb(85, 85, 85);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"background-color: rgb(255, 166, 23);}\n"
+"\n"
+"QPushButton:hover:!pressed{\n"
+"background-color: rgb(163, 109, 0);}\n"
+"\n"
+"")
+        self.back_button.setObjectName("back_button")
+        self.groupBox.raise_()
+        self.back_button.raise_()
         NAM_window.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(NAM_window)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1074, 23))
-        self.menubar.setObjectName("menubar")
-        NAM_window.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(NAM_window)
-        self.statusbar.setObjectName("statusbar")
-        NAM_window.setStatusBar(self.statusbar)
 
         self.retranslateUi(NAM_window)
         QtCore.QMetaObject.connectSlotsByName(NAM_window)
@@ -368,6 +399,8 @@ class Ui_NAM_window(object):
         self.label.setText(_translate("NAM_window", "Output"))
         self.label_2.setText(_translate("NAM_window", "Input"))
         self.label_3.setText(_translate("NAM_window", "Code"))
+        self.calc_button.setText(_translate("NAM_window", "Calculate"))
+        self.back_button.setText(_translate("NAM_window", "Back"))
 
 
 if __name__ == "__main__":
