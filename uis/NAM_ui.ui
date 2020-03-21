@@ -314,24 +314,6 @@ QMenu::separator {
     <property name="title">
      <string>Normal Markov Algorithm</string>
     </property>
-    <widget class="QListView" name="listView">
-     <property name="geometry">
-      <rect>
-       <x>630</x>
-       <y>130</y>
-       <width>241</width>
-       <height>421</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-color: rgb(255, 166, 23);background-color: rgb(85, 85, 85);</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
@@ -406,7 +388,8 @@ background-color: rgb(85, 85, 85);</string>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">border-color: rgb(255, 166, 23);background-color: rgb(85, 85, 85);</string>
+      <string notr="true">border-color: rgb(255, 166, 23);
+background-color: rgb(85, 85, 85);</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_3">
@@ -491,6 +474,25 @@ background-color: rgb(163, 109, 0);}
      </property>
      <property name="text">
       <string>Back</string>
+     </property>
+    </widget>
+    <widget class="QListWidget" name="output_list">
+     <property name="geometry">
+      <rect>
+       <x>625</x>
+       <y>131</y>
+       <width>241</width>
+       <height>421</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border-color: rgb(255, 166, 23);
+background-color: rgb(85, 85, 85);</string>
      </property>
     </widget>
    </widget>

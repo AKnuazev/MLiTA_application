@@ -5,13 +5,54 @@ from uis.menu_ui import Ui_menu_window
 
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import QCoreApplication
+import source.NAM_class as NAM
 
+
+# Path: pyuic5 -x C:\Users\Anton\PycharmProjects\MLiTA_application\uis\NAM_ui.ui -o C:\Users\Anton\PycharmProjects\MLiTA_application\uis\NAM_ui.py
 
 class NAM_window(QtWidgets.QMainWindow, Ui_menu_window):
-    def __init__(self):
+    def __init__(self, menu_window):
         super().__init__()
         self.ui = Ui_NAM_window()
         self.ui.setupUi(self)
+
+        self.menu_window = menu_window
+
+        self.ui.calc_button.clicked.connect(self.calculate)
+        self.ui.back_button.clicked.connect(self.back_to_menu)
+
+    def back_to_menu(self):
+        self.menu_window.show()
+        self.close()
+
+    def calculate(self):
+        self.ui.output_list.clear()
+        self.ui.output_list.setStyleSheet(
+            "border-color: rgb(255, 166, 23); "
+            "background-color: rgb(85, 85, 85);")
+
+        if self.ui.input_line.hasAcceptableInput():
+            if len(self.ui.input_line.text()) > 0:
+                if len(self.ui.code_text.toPlainText()) > 0:
+                    input_word = self.ui.input_line.text()
+                    code = self.ui.code_text.toPlainText()
+
+                    self.ui.output_list.addItem("Input:\n" + input_word + "\n\nSteps:\n")
+                    NAM.NAM_worker(input_word, code, self.ui.output_list)
+                else:
+                    self.error_msg_to_output("Empty code")
+            else:
+                self.error_msg_to_output("Empty word in input")
+
+        # code = self.ui.code_text.text()
+        # NAM_worker = NAM.NAM_worker()
+
+    def error_msg_to_output(self, msg):
+        self.ui.output_list.setStyleSheet(
+            "border-color: rgb(255, 166, 23); "
+            "background-color: rgb(85, 85, 85);"
+            "color: rgb(255, 0, 0);")
+        self.ui.output_list.addItem("Error:\n" + msg)
 
 
 class MenuWindow(QtWidgets.QMainWindow, Ui_menu_window):
@@ -27,7 +68,7 @@ class MenuWindow(QtWidgets.QMainWindow, Ui_menu_window):
 
     def NAM_window_launch(self):
         self.hide()
-        self.NAM_window = NAM_window()
+        self.NAM_window = NAM_window(self)
         self.NAM_window.show()  # Show window
 
 
