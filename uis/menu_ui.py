@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\Anton\PycharmProjects\MLiTA_application\uis\NAM_ui.ui'
+# Form implementation generated from reading ui file 'C:\Users\Anton\PycharmProjects\MLiTA_application\uis\menu_ui.ui'
 #
 # Created by: PyQt5 UI code generator 5.13.2
 #
@@ -10,34 +10,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_NAM_window(object):
-    def setupUi(self, NAM_window):
-        NAM_window.setObjectName("NAM_window")
-        NAM_window.resize(1074, 802)
-        NAM_window.setStyleSheet("/*\n"
-"    Copyright 2013 Emanuel Claesson\n"
-"\n"
-"    Licensed under the Apache License, Version 2.0 (the \"License\");\n"
-"    you may not use this file except in compliance with the License.\n"
-"    You may obtain a copy of the License at\n"
-"\n"
-"        http://www.apache.org/licenses/LICENSE-2.0\n"
-"\n"
-"    Unless required by applicable law or agreed to in writing, software\n"
-"    distributed under the License is distributed on an \"AS IS\" BASIS,\n"
-"    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n"
-"    See the License for the specific language governing permissions and\n"
-"    limitations under the License.\n"
-"*/\n"
-"\n"
-"/*\n"
-"    COLOR_DARK     = #191919\n"
-"    COLOR_MEDIUM   = #353535\n"
-"    COLOR_MEDLIGHT = #5A5A5A\n"
-"    COLOR_LIGHT    = #DDDDDD\n"
-"    COLOR_ACCENT   = #3D7848\n"
-"*/\n"
-"\n"
+class Ui_menu_window(object):
+    def setupUi(self, menu_window):
+        menu_window.setObjectName("menu_window")
+        menu_window.resize(1157, 756)
+        menu_window.setStyleSheet("\n"
 "* {\n"
 "    background: #191919;\n"
 "    color: #DDDDDD;\n"
@@ -295,86 +272,99 @@ class Ui_NAM_window(object):
 "QMenu::separator {\n"
 "    background: #353535;\n"
 "}")
-        self.centralwidget = QtWidgets.QWidget(NAM_window)
-        self.centralwidget.setObjectName("centralwidget")
-        self.groupBox = QtWidgets.QGroupBox(self.centralwidget)
-        self.groupBox.setGeometry(QtCore.QRect(80, 60, 921, 631))
+        self.groupBox = QtWidgets.QGroupBox(menu_window)
+        self.groupBox.setGeometry(QtCore.QRect(120, 60, 921, 631))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.groupBox.setFont(font)
         self.groupBox.setObjectName("groupBox")
-        self.listView = QtWidgets.QListView(self.groupBox)
-        self.listView.setGeometry(QtCore.QRect(630, 130, 241, 451))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.listView.setFont(font)
-        self.listView.setStyleSheet("border-color: rgb(255, 166, 23);background-color: rgb(85, 85, 85);")
-        self.listView.setObjectName("listView")
-        self.label = QtWidgets.QLabel(self.groupBox)
-        self.label.setGeometry(QtCore.QRect(690, 60, 131, 41))
+        self.titel_text = QtWidgets.QLabel(self.groupBox)
+        self.titel_text.setGeometry(QtCore.QRect(270, 230, 381, 41))
         font = QtGui.QFont()
         font.setPointSize(24)
         font.setBold(True)
         font.setWeight(75)
-        self.label.setFont(font)
-        self.label.setObjectName("label")
-        self.lineEdit = QtWidgets.QLineEdit(self.groupBox)
-        self.lineEdit.setGeometry(QtCore.QRect(120, 130, 321, 41))
+        self.titel_text.setFont(font)
+        self.titel_text.setObjectName("titel_text")
+        self.NAM_button = QtWidgets.QPushButton(self.groupBox)
+        self.NAM_button.setGeometry(QtCore.QRect(270, 310, 381, 61))
         font = QtGui.QFont()
-        font.setPointSize(16)
-        self.lineEdit.setFont(font)
-        self.lineEdit.setStyleSheet("border-color: rgb(255, 166, 23);\n"
-"background-color: rgb(85, 85, 85);")
-        self.lineEdit.setObjectName("lineEdit")
-        self.label_2 = QtWidgets.QLabel(self.groupBox)
-        self.label_2.setGeometry(QtCore.QRect(240, 70, 101, 31))
+        font.setPointSize(17)
+        self.NAM_button.setFont(font)
+        self.NAM_button.setStyleSheet("QPushButton{\n"
+"border-color: rgb(255, 166, 23);\n"
+"background-color: rgb(85, 85, 85);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"background-color: rgb(255, 166, 23);}\n"
+"\n"
+"QPushButton:hover:!pressed{\n"
+"background-color: rgb(163, 109, 0);}\n"
+"\n"
+"")
+        self.NAM_button.setObjectName("NAM_button")
+        self.MT_button = QtWidgets.QPushButton(self.groupBox)
+        self.MT_button.setGeometry(QtCore.QRect(270, 400, 381, 61))
         font = QtGui.QFont()
-        font.setPointSize(24)
+        font.setPointSize(18)
+        self.MT_button.setFont(font)
+        self.MT_button.setStyleSheet("QPushButton{\n"
+"border-color: rgb(255, 166, 23);\n"
+"background-color: rgb(85, 85, 85);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"background-color: rgb(255, 166, 23);}\n"
+"\n"
+"QPushButton:hover:!pressed{\n"
+"background-color: rgb(163, 109, 0);}")
+        self.MT_button.setObjectName("MT_button")
+        self.RAM_button = QtWidgets.QPushButton(self.groupBox)
+        self.RAM_button.setGeometry(QtCore.QRect(270, 490, 381, 61))
+        font = QtGui.QFont()
+        font.setPointSize(18)
+        self.RAM_button.setFont(font)
+        self.RAM_button.setStyleSheet("QPushButton{\n"
+"border-color: rgb(255, 166, 23);\n"
+"background-color: rgb(85, 85, 85);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"background-color: rgb(255, 166, 23);}\n"
+"\n"
+"QPushButton:hover:!pressed{\n"
+"background-color: rgb(163, 109, 0);}")
+        self.RAM_button.setObjectName("RAM_button")
+        self.titel_text_2 = QtWidgets.QLabel(self.groupBox)
+        self.titel_text_2.setGeometry(QtCore.QRect(320, 80, 281, 81))
+        font = QtGui.QFont()
+        font.setPointSize(57)
         font.setBold(True)
+        font.setUnderline(True)
         font.setWeight(75)
-        self.label_2.setFont(font)
-        self.label_2.setObjectName("label_2")
-        self.textEdit = QtWidgets.QTextEdit(self.groupBox)
-        self.textEdit.setGeometry(QtCore.QRect(70, 260, 431, 321))
-        font = QtGui.QFont()
-        font.setPointSize(16)
-        self.textEdit.setFont(font)
-        self.textEdit.setStyleSheet("border-color: rgb(255, 166, 23);background-color: rgb(85, 85, 85);")
-        self.textEdit.setObjectName("textEdit")
-        self.label_3 = QtWidgets.QLabel(self.groupBox)
-        self.label_3.setGeometry(QtCore.QRect(240, 200, 91, 41))
-        font = QtGui.QFont()
-        font.setPointSize(24)
-        font.setBold(True)
-        font.setWeight(75)
-        self.label_3.setFont(font)
-        self.label_3.setObjectName("label_3")
-        NAM_window.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(NAM_window)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1074, 23))
-        self.menubar.setObjectName("menubar")
-        NAM_window.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(NAM_window)
-        self.statusbar.setObjectName("statusbar")
-        NAM_window.setStatusBar(self.statusbar)
+        self.titel_text_2.setFont(font)
+        self.titel_text_2.setObjectName("titel_text_2")
 
-        self.retranslateUi(NAM_window)
-        QtCore.QMetaObject.connectSlotsByName(NAM_window)
+        self.retranslateUi(menu_window)
+        QtCore.QMetaObject.connectSlotsByName(menu_window)
 
-    def retranslateUi(self, NAM_window):
+    def retranslateUi(self, menu_window):
         _translate = QtCore.QCoreApplication.translate
-        NAM_window.setWindowTitle(_translate("NAM_window", "MainWindow"))
-        self.groupBox.setTitle(_translate("NAM_window", "Normal Markov Algorithm"))
-        self.label.setText(_translate("NAM_window", "Output"))
-        self.label_2.setText(_translate("NAM_window", "Input"))
-        self.label_3.setText(_translate("NAM_window", "Code"))
+        menu_window.setWindowTitle(_translate("menu_window", "Dialog"))
+        self.groupBox.setTitle(_translate("menu_window", "Main menu"))
+        self.titel_text.setText(_translate("menu_window", "Choose algorithm type:"))
+        self.NAM_button.setText(_translate("menu_window", "Normal Markov algorithm"))
+        self.MT_button.setText(_translate("menu_window", "Turing machine"))
+        self.RAM_button.setText(_translate("menu_window", "Random-access machine"))
+        self.titel_text_2.setText(_translate("menu_window", "ML&TA"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
-    NAM_window = QtWidgets.QMainWindow()
-    ui = Ui_NAM_window()
-    ui.setupUi(NAM_window)
-    NAM_window.show()
+    menu_window = QtWidgets.QDialog()
+    ui = Ui_menu_window()
+    ui.setupUi(menu_window)
+    menu_window.show()
     sys.exit(app.exec_())

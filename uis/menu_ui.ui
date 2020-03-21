@@ -1,43 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>NAM_window</class>
- <widget class="QMainWindow" name="NAM_window">
+ <class>menu_window</class>
+ <widget class="QDialog" name="menu_window">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1074</width>
-    <height>802</height>
+    <width>1157</width>
+    <height>756</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">/*
-	Copyright 2013 Emanuel Claesson
-
-	Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
-	you may not use this file except in compliance with the License.
-	You may obtain a copy of the License at
-
-		http://www.apache.org/licenses/LICENSE-2.0
-
-	Unless required by applicable law or agreed to in writing, software
-	distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
-	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	See the License for the specific language governing permissions and
-	limitations under the License.
-*/
-
-/*
-	COLOR_DARK     = #191919
-	COLOR_MEDIUM   = #353535
-	COLOR_MEDLIGHT = #5A5A5A
-	COLOR_LIGHT    = #DDDDDD
-	COLOR_ACCENT   = #3D7848
-*/
-
+   <string notr="true">
 * {
 	background: #191919;
 	color: #DDDDDD;
@@ -296,152 +273,157 @@ QMenu::separator {
 	background: #353535;
 }</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <widget class="QGroupBox" name="groupBox">
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>60</y>
+     <width>921</width>
+     <height>631</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="title">
+    <string>Main menu</string>
+   </property>
+   <widget class="QLabel" name="titel_text">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>60</y>
-      <width>921</width>
-      <height>631</height>
+      <x>270</x>
+      <y>230</y>
+      <width>381</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>24</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
      </font>
     </property>
-    <property name="title">
-     <string>Normal Markov Algorithm</string>
+    <property name="text">
+     <string>Choose algorithm type:</string>
     </property>
-    <widget class="QListView" name="listView">
-     <property name="geometry">
-      <rect>
-       <x>630</x>
-       <y>130</y>
-       <width>241</width>
-       <height>451</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-color: rgb(255, 166, 23);background-color: rgb(85, 85, 85);</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>690</x>
-       <y>60</y>
-       <width>131</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>24</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Output</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit">
-     <property name="geometry">
-      <rect>
-       <x>120</x>
-       <y>130</y>
-       <width>321</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-color: rgb(255, 166, 23);
-background-color: rgb(85, 85, 85);</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>240</x>
-       <y>70</y>
-       <width>101</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>24</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Input</string>
-     </property>
-    </widget>
-    <widget class="QTextEdit" name="textEdit">
-     <property name="geometry">
-      <rect>
-       <x>70</x>
-       <y>260</y>
-       <width>431</width>
-       <height>321</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>16</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-color: rgb(255, 166, 23);background-color: rgb(85, 85, 85);</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>240</x>
-       <y>200</y>
-       <width>91</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>24</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
-      </font>
-     </property>
-     <property name="text">
-      <string>Code</string>
-     </property>
-    </widget>
+   </widget>
+   <widget class="QPushButton" name="NAM_button">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>310</y>
+      <width>381</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>17</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-color: rgb(255, 166, 23);
+background-color: rgb(85, 85, 85);
+}
+
+QPushButton:pressed{
+background-color: rgb(255, 166, 23);}
+
+QPushButton:hover:!pressed{
+background-color: rgb(163, 109, 0);}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Normal Markov algorithm</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="MT_button">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>400</y>
+      <width>381</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-color: rgb(255, 166, 23);
+background-color: rgb(85, 85, 85);
+}
+
+QPushButton:pressed{
+background-color: rgb(255, 166, 23);}
+
+QPushButton:hover:!pressed{
+background-color: rgb(163, 109, 0);}</string>
+    </property>
+    <property name="text">
+     <string>Turing machine</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="RAM_button">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>490</y>
+      <width>381</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+border-color: rgb(255, 166, 23);
+background-color: rgb(85, 85, 85);
+}
+
+QPushButton:pressed{
+background-color: rgb(255, 166, 23);}
+
+QPushButton:hover:!pressed{
+background-color: rgb(163, 109, 0);}</string>
+    </property>
+    <property name="text">
+     <string>Random-access machine</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="titel_text_2">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>80</y>
+      <width>281</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>57</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>true</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>ML&amp;TA</string>
+    </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1074</width>
-     <height>23</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
