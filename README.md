@@ -13,9 +13,9 @@ There 3 types of algorithms available for writing:
 
 ## How does it look like?
 
-First you get to the main menu where you can choose the type of algorythm to code
+First you get to the main menu where you can choose the type of algorythm to code:
 
-*picture in progress*
+![menu_ui](images/menu_ui_screenshot.png)
 
 Markov algorithm interface is looking like that:
 
